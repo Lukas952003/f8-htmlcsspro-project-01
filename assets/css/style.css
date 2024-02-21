@@ -1,0 +1,615 @@
+* {
+  box-sizing: border-box;
+}
+/* Thư mục gốc - dùng để đặt biến */
+:root {
+  --primary-color: #0f1b4c;
+}
+html {
+  font-size: 62.5%; /* Để sử dụng đơn vị rem*/
+}
+
+body {
+  font-size: 1.6rem; /*Tương ứng với 16px*/
+  font-family: "Poppins", sans-serif;
+}
+/* common - Thành phần dùng chung */
+.content {
+  width: 1110px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  min-width: 98px;
+  padding: 18px 16px;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+/* Header */
+.header {
+  position: relative;
+  background-color: #e6f0ff;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 38px; /*Lẽ ra dùng margin-top ==> Hiện tượng margin collapse, nên chuyển thành padding kq tương tự*/
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 50px; /*64 - padding bên trái 14px nên còn 50*/
+}
+
+.navbar .action {
+  margin-left: auto;
+}
+
+.navbar ul a {
+  color: #4f5361;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+  text-decoration: 2px underline;
+}
+
+.navbar .action-link {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.navbar .action-btn {
+  padding: 13px 16px;
+  margin-left: 18px;
+  border-radius: 8px;
+}
+
+/* Hero */
+.hero {
+  margin-top: 130px;
+}
+
+.hero .infor {
+  width: 51%; /*559 /1110 =0.503 ==> 51%*/
+}
+
+.hero .sub-title {
+  color: #687690;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5; /*27/18*/
+  letter-spacing: 0.18px;
+}
+.hero .title {
+  margin-top: 8px;
+  color: #000336;
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1.19; /* 118.75% */
+}
+
+.hero .desc {
+  margin-top: 30px;
+  color: #5a6473;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.78; /* 177.778% */
+}
+
+.hero-cta {
+  margin-top: 40px;
+  min-width: 170px;
+}
+
+.hero-img {
+  position: absolute;
+  right: calc(
+    (100vw - 1110px) / 2 - 100px
+  ); /*65px, nhưng khi thu phóng xãy ra lỗi*/
+  bottom: 0;
+}
+
+/* ==================== clients ===================== */
+.clients {
+  margin-top: 79px;
+  padding: 43px 0 64px;
+}
+
+.clients .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients .desc {
+  color: #7d8589;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.25; /* 125% */
+}
+
+.clients .row-desc {
+  margin-top: 23px;
+}
+.clients .image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 96.5px;
+}
+
+/* ===================== Guides================================= */
+.guides {
+  margin-top: 40px;
+  padding: 93px 0 79px;
+}
+
+.guides .sub-title {
+  position: relative;
+  color: #000339;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+
+.guides .sub-title::before {
+  /*Tạo 1 cái lớp chứa đường gạch ngang, bắt buộc phải có content: "". Muốn set thuộc tính phải là inline-block*/
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  border-radius: 12px;
+  background: #000339;
+  top: -10px;
+  left: 50%;
+  /*left: 50% thì nó sẽ lệch sang phải một chút, 
+  rồi thêm transform: translateX(-50%) thì cái before nó chạy sang trái bằng 50% width của chính nó nên được căn giữa nha em.*/
+  transform: translateX(-50%);
+}
+
+.guides .desc {
+  width: 459px;
+  /* kích thước tối đa là 459px, khi bị thu hẹp lại nó sẽ rớt xuống hàng chứ không xuất hiện thanh cuộn */
+  max-width: 100%;
+  color: #5a6473;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875; /* 187.5% */
+  margin: 20px auto 0;
+}
+
+.list-guide {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.list-guide .guide-item {
+  margin: 0 70px;
+  text-align: center;
+}
+
+.guide-item .title {
+  margin-top: 26px;
+  color: #3b3c45;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1; /* 110% */
+}
+
+.guide-item .link {
+  display: inline-block;
+  color: #0689ff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.guide-item .arrow {
+  margin-left: 6px;
+}
+
+.guide-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.guide-cta .btn {
+  min-width: 170px;
+}
+
+/* ====================feature========================= */
+.featured {
+  margin-top: 41px;
+  padding: 110px 0;
+  background-color: #f5fafe;
+}
+
+.featured .sub-title {
+  color: #000339;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+.featured .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.featured .desc {
+  color: #5a6473;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3; /* 187.5% */
+}
+
+.featured .link {
+  display: flex;
+  align-items: center;
+  color: #0689ff;
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.featured .link .arrow {
+  position: relative;
+  right: -5px;
+}
+
+.featured .list {
+  display: flex;
+  gap: 30px; /*Thuộc tính này giúp cho các thẻ con có khoảng cách nhau 30px, viết vào thẻ cha, tự động thẻ con sẽ bị thay đổi*/
+  margin-top: 70px;
+}
+
+.featured .list .item {
+  flex: 1; /*Giúp cho chiều rộng được chia đều, ở đây có 3 item nên cả 3 được chia đều nhau*/
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.featured .item .thumb {
+  width: 100%;
+  height: 227px;
+  object-fit: cover; /*Giúp cho tỉ lệ hình ảnh được giữ lại và được lấp đầy*/
+  border-top-left-radius: 12px; /*Bo gốc hình ảnh ở trên*/
+  border-top-right-radius: 12px;
+}
+
+.featured .item .body {
+  padding: 17px 20px 24px;
+}
+
+.featured .title a {
+  color: #000339;
+  font-size: 2rem;
+  font-weight: 600;
+  /* Thuộc tính giúp khi nội dung dài quá sẽ xuất hiện dấu 3 chấm */
+  line-height: 1.5; /* 100% */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*Số dòng muốn xuât hiện, sau 2 dòng sẽ ẩn đi và xuất hiện 3 chấm*/
+  -webkit-box-orient: vertical; /*hướng dọc*/
+  overflow: hidden; /*Ẩn đi phần nội dung dài*/
+  /* Thuộc tính giúp khi nội dung dài quá sẽ xuất hiện dấu 3 chấm */
+}
+
+.featured .item .desc {
+  margin-top: 11px;
+  color: #a3a6ab;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  /* Thuộc tính giúp khi nội dung dài quá sẽ xuất hiện dấu 3 chấm */
+  line-height: 1.5; /* 100% */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*Số dòng muốn xuât hiện, sau 2 dòng sẽ ẩn đi và xuất hiện 3 chấm*/
+  -webkit-box-orient: vertical; /*hướng dọc*/
+  overflow: hidden; /*Ẩn đi phần nội dung dài*/
+  /* Thuộc tính giúp khi nội dung dài quá sẽ xuất hiện dấu 3 chấm */
+
+  word-break: break-all; /*Khi nào dung chạm tới giới hạn sẽ tự động xuống hàng mà không chọt thủng giao diện*/
+}
+
+.featured .item .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 21px;
+}
+
+.featured .item .icon {
+  margin-left: 23px;
+}
+
+.featured .item .icon:first-child {
+  margin-left: 0;
+}
+
+.featured .item .label {
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  color: #4d4d52;
+}
+
+/* ====================stats - Số liệu thống kê =============================== */
+.stats {
+  margin-top: 75px;
+  padding: 50px 227px 50 316px;
+}
+
+.stats .row {
+  display: flex;
+}
+
+.stars .content {
+  width: 1017px;
+}
+
+.stats .img-block,
+.stats .info {
+  width: 50%;
+}
+
+.stats .info {
+  padding: 79px 0 0 165px;
+}
+
+.stats .info .sub-title {
+  position: relative;
+  width: 269px;
+  color: #000339;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.stats .info .sub-title::before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  display: block;
+  width: 41px;
+  height: 4px;
+  border-radius: 12px;
+  background: #000339;
+}
+
+.stats .info .desc {
+  width: 309px;
+  color: #5a6473;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2; /* 187.5% */
+  margin-top: 20px;
+}
+
+.stats .img-block .image {
+  display: block;
+  margin-left: auto;
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.stats-trend .icon {
+  margin-left: auto;
+}
+.stats .img-block {
+  position: relative;
+}
+.stats .stats-trend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 45px 22px 40px;
+  width: 239px;
+  border-radius: 0px 0px 12px 12px;
+  background: #fff;
+  box-shadow: 90px 85px 100px 0px rgba(0, 0, 0, 0.06);
+}
+
+.stats-trend .value {
+  color: #000339;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.26px;
+}
+
+.stats-trend .desc {
+  color: #a7a7a7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  margin-top: 8px;
+}
+
+.stats-trend .separate {
+  margin-top: 25px;
+  height: 1.2px;
+  border: 1px solid #e9e9e9;
+}
+
+.stats .avatar-block {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px 14px;
+  flex-wrap: wrap;
+}
+
+.stats .avatar {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: -3px;
+}
+.stats .avatar-group {
+  display: flex;
+}
+
+.stats .row-qty {
+  justify-content: space-between;
+  margin-top: 110px;
+  padding: 0px 32px;
+}
+
+.stats strong-qty {
+  font-size: 6.4rem;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.stats .qty-desc {
+  margin-top: 24px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7;
+  text-align: left;
+  color: #7b8087;
+}
+
+.subscription {
+  margin-top: 90px;
+}
+
+.subscription .body {
+  position: relative;
+  border-radius: 20px;
+  background: #063183;
+  height: 370px;
+  display: flex;
+  align-items: center;
+}
+
+.subscription .infor {
+  padding: 0 80px;
+  width: 671px;
+}
+
+.subscription .infor .sub-title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.subscription .infor .desc {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.88;
+  margin-top: 15px;
+  opacity: 0.75;
+}
+
+.subscription .infor .btn {
+  border-radius: 12px;
+  background: #fff;
+  color: #002366;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 50px;
+  width: 151px;
+  margin-top: 20px;
+}
+
+.subscription .image {
+  position: absolute;
+  bottom: 0;
+  right: 221px;
+}
+
+/* .Footer - Chân trang ------------------------------------------- */
+.footer {
+  margin-top: 55px;
+  padding: 50px 0 58px;
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .row-top {
+  gap: 185px;
+}
+
+.footer .heading {
+  color: #1c1c1d;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer .list,
+.desc {
+  margin-top: 42px;
+}
+
+.footer .item {
+  margin-top: 18px;
+}
+
+.footer .item a {
+  color: #7a7a7e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  white-space: nowrap; /* Thuộc tính này giúp cho chữ k bị xuống hàng*/
+}
+
+.footer .social {
+  margin-top: 40px;
+}
+
+.footer .desc {
+  color: #7a7a7e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.footer .row {
+  margin-top: 81px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .copyright {
+  color: #c2c2c2;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
