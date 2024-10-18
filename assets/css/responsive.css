@@ -98,6 +98,8 @@
   }
 }
 
+/* ------------------------------------------------------------------- */
+
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu-drawer .action {
@@ -111,6 +113,19 @@
 
   .clients {
     margin-top: 30px;
+  }
+
+  .featured {
+    padding: 25px;
+  }
+
+  .featured .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured .desc {
+    margin-top: 0px;
   }
 }
 
@@ -142,6 +157,7 @@
   }
 
   .hero-img {
+    user-select: none;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -162,8 +178,23 @@
     margin-top: -50px;
   }
 
-  .list-guide {
+  .featured .sub-title {
+    margin-top: -30px;
+  }
+
+  .featured .row {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
+  }
+
+  .list-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .featured .list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

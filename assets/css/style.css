@@ -12,6 +12,7 @@ html {
 body {
   font-size: 1.6rem; /*Tương ứng với 16px*/
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 /* common - Thành phần dùng chung */
 .content {
@@ -166,7 +167,7 @@ a {
 
 /* ===================== Guides================================= */
 .guides {
-  margin-top: 40px;
+  margin-top: -20px;
   padding: 93px 0 79px;
 }
 
@@ -267,6 +268,7 @@ a {
 .featured .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 15px;
 }
 
@@ -274,11 +276,12 @@ a {
   color: #5a6473;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3; /* 187.5% */
+  margin-top: 0;
 }
 
 .featured .link {
   display: flex;
+  display: block;
   align-items: center;
   color: #0689ff;
   text-align: right;
