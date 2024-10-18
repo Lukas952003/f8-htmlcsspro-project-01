@@ -569,11 +569,12 @@ a {
 }
 
 .footer .row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer .row-top {
-  gap: 185px;
+  /* gap: 185px; */
 }
 
 .footer .heading {
@@ -585,7 +586,7 @@ a {
 
 .footer .list,
 .desc {
-  margin-top: 42px;
+  /* margin-top: 42px; */
 }
 
 .footer .item {
@@ -607,7 +608,7 @@ a {
   color: #7a7a7e;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.35;
 }
 
 .footer .row {
@@ -620,4 +621,8 @@ a {
   color: #c2c2c2;
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+.footer .row .column .heading {
+  margin-bottom: 32px;
 }

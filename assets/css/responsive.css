@@ -96,6 +96,67 @@
   .clients .row p:first-child {
     margin-right: 10px;
   }
+
+  .stats .row {
+    /* position: relative; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stats .row-qty {
+    display: flex;
+    gap: 60px;
+  }
+
+  .stats .info {
+    padding: 0px 40px 0px 40px;
+  }
+
+  .stats .info .sub-title::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .stats .stats-trend {
+    top: -60px;
+    left: 0px;
+  }
+
+  .stats .info .sub-title,
+  .stats .info .desc {
+    width: 100%;
+  }
+
+  .stats .info {
+    width: 100%;
+    text-align: center;
+  }
+  .subscription .image {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 10px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .footer .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 10px;
+  }
+
+  .footer .row .column:last-child .heading {
+    margin-top: -3px;
+  }
+
+  .clients .desc {
+    margin-top: 24px;
+  }
 }
 
 /* ------------------------------------------------------------------- */
@@ -196,5 +257,64 @@
   .featured .list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .stats .row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .stats .img-block {
+    width: 80%;
+  }
+
+  .stats .row .image {
+    width: 300px;
+    height: 360px;
+  }
+
+  .stats .img-block {
+    position: relative;
+  }
+
+  .stats .stats-trend {
+    position: absolute;
+    top: -60px;
+    left: -20px;
+  }
+
+  .stats .info .sub-title {
+    margin-top: 30px;
+  }
+
+  .stats .img-block .image {
+    margin: 0 auto;
+  }
+
+  .stats .stats-trend {
+    width: 160px;
+    height: 330px;
+  }
+
+  .stats strong-qty {
+    font-size: 4.2rem;
+  }
+
+  .stats .row-qty {
+    margin-top: 35px;
+    font-size: 2.2rem;
+  }
+
+  .stats .row-qty .qty-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .row .column:last-child .heading {
+    margin-top: 15px;
   }
 }
