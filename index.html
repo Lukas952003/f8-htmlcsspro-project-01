@@ -91,17 +91,34 @@
       rel="stylesheet"
     />
 
+    <!-- CSS   -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- PC Header -->
     <header class="header">
       <div class="content">
         <div class="navbar">
+          <!-- Menu Tablet/Mobile -->
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="nav__menu-mb-tab"
+            >
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                fill="currentColor"
+              />
+            </svg>
+          </label>
+
           <!-- Logo -->
-          <img src="./assets/img/logo.svg" alt="Logo" />
+          <img src="./assets/img/logo.svg" alt="Logo" class="logo" />
+
           <!-- Navigation -->
           <ul>
             <li><a href="#!">Home</a></li>
@@ -135,6 +152,38 @@
             src="./assets/img/hero-img.svg"
             alt="Discover a place you'll love to live."
           />
+        </div>
+      </div>
+    </header>
+
+    <!-- Tablet/Mobile Header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu content -->
+      <div class="menu-drawer">
+        <img src="./assets/img/logo.svg" alt="Logo" />
+        <!-- Navigation -->
+        <ul>
+          <li><a href="#!">Home</a></li>
+          <li><a href="#!">Features</a></li>
+          <li><a href="#!">Services</a></li>
+          <li><a href="#!">Resources</a></li>
+          <li><a href="#!">Contact</a></li>
+        </ul>
+
+        <div class="action">
+          <!--link bình thường-->
+          <a class="action-link" href="#!">sign in</a>
+          <!--Nút dùng chung nên đặt là btn-->
+          <a class="btn action-btn" href="#!">sign up</a>
         </div>
       </div>
     </header>

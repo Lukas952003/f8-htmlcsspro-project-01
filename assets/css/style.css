@@ -55,8 +55,13 @@ a {
 
 .navbar ul {
   display: flex;
+  align-items: center;
   list-style-type: none;
   margin-left: 50px; /*64 - padding bên trái 14px nên còn 50*/
+}
+
+.toggle-menu {
+  display: none;
 }
 
 .navbar .action {
